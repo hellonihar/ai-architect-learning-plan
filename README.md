@@ -114,22 +114,53 @@
 
 ## Getting Started
 
+### Prerequisites
+
+- Python 3.11+
+- [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) (for Azure phases)
+- OpenAI API key or Azure OpenAI access
+
+### Setup
+
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USER/ai-architect-learning-plan
+git clone https://github.com/hellonihar/ai-architect-learning-plan
 cd ai-architect-learning-plan
 
-# Create environment
+# Option A — Python venv
 python -m venv .venv
-.venv\Scripts\Activate   # Windows
-# source .venv/bin/activate  # macOS/Linux
-
-# Install dependencies
+.venv\Scripts\Activate           # Windows
+# source .venv/bin/activate      # macOS/Linux
 pip install -r requirements.txt
 
-# Launch notebooks
-jupyter notebook
+# Option B — Conda
+conda env create -f environment.yml
+conda activate ai-architect
+
+# Configure API keys
+cp .env.example .env             # then edit with your keys
 ```
+
+### Quick Start
+
+```bash
+# Launch notebooks (Phase 1–2)
+jupyter notebook
+
+# Run a Python script (Phase 2+)
+python phase-02-genai/01-prompt-engineering/chain-of-thought.py
+
+# Run tests
+pytest capstone/tests/
+
+# Set OPENAI_API_KEY in your environment first
+```
+
+### Notes
+
+- Each phase folder has a `README.md` or notebook with detailed instructions
+- Azure-specific phases require `az login` and resource deployment
+- Start with Phase 1 — no API key needed for the ML basics notebook
 
 ---
 
