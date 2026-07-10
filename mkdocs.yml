@@ -1,0 +1,27 @@
+site_name: AI Architect Learning Plan
+site_description: Learning plan for senior architects transitioning to AI expert architect
+repo_url: https://github.com/YOUR_USER/ai-architect-learning-plan
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+nav:
+  - Home: index.md
+  - Architecture:
+    - RAG Pattern: architecture/01-rag-pattern.md
+    - Agent Patterns: architecture/02-agent-patterns.md
+    - Enterprise Deployment: architecture/03-enterprise-deployment.md
+    - Cost/Quality Trade-offs: architecture/04-cost-quality-tradeoffs.md
+  - Decision Log:
+    - ADR Template: decision-log/0000-template.md
+  - Cheatsheets:
+    - Prompt Engineering: cheatsheets/prompt-engineering.md
+    - Azure AI Foundry: cheatsheets/azure-ai-foundry.md
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - admonition
+  - toc:
+      permalink: true

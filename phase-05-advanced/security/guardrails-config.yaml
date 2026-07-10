@@ -1,0 +1,42 @@
+# Guardrails Configuration
+# Apply at AI Gateway or application level
+
+input_validation:
+  max_length: 4096
+  blocked_patterns:
+    - "ignore previous instructions"
+    - "system override"
+    - "DAN"
+    - "Do Anything Now"
+
+content_filtering:
+  enabled: true
+  provider: "azure_content_safety"
+  categories:
+    hate:
+      severity: "high"
+    violence:
+      severity: "high"
+    sexual:
+      severity: "medium"
+    self_harm:
+      severity: "high"
+
+rate_limiting:
+  requests_per_minute: 60
+  requests_per_hour: 1000
+  burst_limit: 10
+
+pii_detection:
+  enabled: true
+  entities:
+    - "email"
+    - "phone"
+    - "ssn"
+    - "credit_card"
+  action: "redact"
+
+output_validation:
+  max_tokens: 2048
+  toxicity_check: true
+  factuality_check: false  # Enable for production
