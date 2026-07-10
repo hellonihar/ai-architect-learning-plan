@@ -1,6 +1,6 @@
 site_name: AI Architect Learning Plan
 site_description: Learning plan for senior architects transitioning to AI expert architect
-repo_url: https://github.com/YOUR_USER/ai-architect-learning-plan
+repo_url: https://github.com/hellonihar/ai-architect-learning-plan
 theme:
   name: material
   features:
@@ -14,6 +14,18 @@ nav:
     - Agent Patterns: architecture/02-agent-patterns.md
     - Enterprise Deployment: architecture/03-enterprise-deployment.md
     - Cost/Quality Trade-offs: architecture/04-cost-quality-tradeoffs.md
+    - Prompt Management: architecture/05-prompt-management.md
+    - Guardrails & Safety: architecture/06-guardrails-safety.md
+    - Evaluation & Observability: architecture/07-evaluation-observability.md
+    - Model Router & Fallback: architecture/08-model-router-fallback.md
+    - Caching Strategies: architecture/09-caching-strategies.md
+    - Multi-Modal Pipeline: architecture/10-multi-modal-pipeline.md
+    - Data Pipeline for AI: architecture/11-data-pipeline-ai.md
+    - Fine-tuning Pipeline: architecture/12-fine-tuning-pipeline.md
+    - AI + Workflow Integration: architecture/13-ai-workflow-integration.md
+    - Batch & Async Processing: architecture/14-batch-async-processing.md
+    - Testing Non-Deterministic: architecture/15-testing-non-deterministic.md
+    - Streaming Architecture: architecture/16-streaming-architecture.md
   - Decision Log:
     - ADR Template: decision-log/0000-template.md
   - Cheatsheets:
